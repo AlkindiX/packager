@@ -1,8 +1,11 @@
 ﻿using Microsoft.VisualBasic;
+using Octokit;
 using Packager.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
+using System.Net.NetworkInformation;
 using System.Windows.Forms;
 
 namespace ReleaseMakerScript
@@ -33,7 +36,7 @@ namespace ReleaseMakerScript
     @"Top level Arguments:-
  -h	Show help
  -s	Settings
-
+ -c Check for updates
 Settings:-
  --r	Release directory setting
   ---add[directory name]		Add release directory location
@@ -52,6 +55,54 @@ Settings:-
     );
                         break;
 
+                    case "-c":
+                        if (!CheckNet())
+                        {
+                            Console.Error.WriteLine("Please check your Internet connection");
+                        }
+                        GitHubClient clinet = new GitHubClient(new ProductHeaderValue("packager"));
+                        var release = clinet.Release.GetAll("AlkindiX", "packager");
+                        Release re = null;
+                        foreach (var item in release.Result)
+                        {
+                            re = item;
+                            break;
+                        }
+                        Console.WriteLine("Checking for update...");
+                        release.Wait();
+                        Console.WriteLine("The current release of packager is {0} released at {1}, you can download it at \n{2}", re.TagName, re.PublishedAt.ToString(), re.HtmlUrl);
+                        var ass = clinet.Release.GetAllAssets("AlkindiX", "packager", re.Id);
+                        Console.WriteLine("Reading files on the current update...");
+                        ass.Wait();
+                        DirectoryInfo updatedir = new DirectoryInfo("updates");
+                        if (!updatedir.Exists)
+                        {
+                            updatedir.Create();
+                        }
+                        DirectoryInfo tagdir = new DirectoryInfo(Path.Combine(updatedir.FullName, re.TagName));
+                        if (!tagdir.Exists)
+                        {
+                            tagdir.Create();
+                        }
+
+                        int x = 0;
+                        foreach (var item in ass.Result)
+                        {
+                            x++;
+                            Console.WriteLine("{0} {1}", x.ToString(), item.Name);
+                            Console.WriteLine("Downloading {0}", item.Name);
+                            WebClient clin = new WebClient();
+                            var file_full_path = Path.Combine(tagdir.FullName, item.Name);
+                            if (File.Exists(file_full_path))
+                            {
+                                Console.WriteLine("Warning: The release is already exist {0}", file_full_path);
+                                File.Delete(file_full_path);
+                            }
+                            clin.DownloadFile(item.BrowserDownloadUrl, file_full_path);
+                            Console.WriteLine("Downloading complete at {0}", file_full_path);
+                        }
+                        break;
+
                     case "-s":
                         if (args.Length < 2)
                         {
@@ -67,7 +118,7 @@ Settings:-
                                 break;
 
                             case "--g":
-                                Application.EnableVisualStyles();
+                                System.Windows.Forms.Application.EnableVisualStyles();
                                 FormConfiguration config = new FormConfiguration();
                                 config.ShowDialog();
                                 break;
@@ -293,6 +344,15 @@ Settings:-
                 Console.WriteLine("Creating zip file successful, produced file is located in \"" + releasefile + "\"");
             }
             Console.WriteLine();
+        }
+
+        [System.Runtime.InteropServices.DllImport("wininet.dll")]
+        private extern static bool InternetGetConnectedState(out int Description, int ReservedValue);
+
+        public static bool CheckNet()
+        {
+            int desc;
+            return InternetGetConnectedState(out desc, 0);
         }
     }
 }
