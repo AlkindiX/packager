@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Parameters>
+  <Param name="h" text="Help" />
+  <Param name="s" text="Settings">
+    <Param name="clear" text="Clear all settings" />
+    
+  </Param>
+</Parameters>
