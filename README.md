@@ -22,3 +22,7 @@ You can exclude files that aren't needed or you won't show it to the others. Its
 ## For Developers
 
 You can easily put this file location into your build project. So after successful build, packager will absolutely will work and you can also view the output. I always use this program for many projects in visual studio and it worked fine
+
+## Fully support in command line
+
+You can use the command line to configure the project easily using easy command line arguments
