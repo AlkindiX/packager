@@ -3,9 +3,9 @@ using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace ReleaseMakerScript
+namespace Packager
 {
-    public class FormConfiguration : Form
+    internal class FormConfiguration : Form
     {
         private Label label1;
         private ListBox listBox1;
@@ -19,6 +19,7 @@ namespace ReleaseMakerScript
         private Button button7;
         private Button button8;
         private Button button9;
+        private CheckBox checkBox1;
         private Button button3;
 
         protected override void OnLoad(EventArgs e)
@@ -41,6 +42,7 @@ namespace ReleaseMakerScript
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             //
             // label1
@@ -182,9 +184,23 @@ namespace ReleaseMakerScript
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             //
+            // checkBox1
+            //
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = global::Packager.Properties.Settings.Default.EnableLog;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::Packager.Properties.Settings.Default, "EnableLog", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.checkBox1.Location = new System.Drawing.Point(12, 295);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(98, 17);
+            this.checkBox1.TabIndex = 13;
+            this.checkBox1.Text = "Enable Logging";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            //
             // FormConfiguration
             //
             this.ClientSize = new System.Drawing.Size(571, 330);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);

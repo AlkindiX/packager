@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace ReleaseMakerScript
+namespace Packager
 {
     partial class AboutBox : Form
     {
@@ -99,6 +99,11 @@ namespace ReleaseMakerScript
                 return ((AssemblyCompanyAttribute)attributes[0]).Company;
             }
         }
-        #endregion
+
+        #endregion Assembly Attribute Accessors
+
+        private void AboutBox_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

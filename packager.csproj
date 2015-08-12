@@ -47,7 +47,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>ReleaseMakerScript.Script</StartupObject>
+    <StartupObject>Packager.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup />
@@ -73,6 +73,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\Common\Common.Data\bin\Release\Common.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>packages\DotNetZip.1.9.6\lib\net20\Ionic.Zip.dll</HintPath>
     </Reference>
@@ -102,7 +105,20 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="program.cs" />
+    <Compile Include="CheckUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckUpdate.Designer.cs">
+      <DependentUpon>CheckUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="License.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="License.Designer.cs">
+      <DependentUpon>License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogAttrbute.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -113,10 +129,14 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.cs" />
-    <Compile Include="Settings1.cs" />
+    <Compile Include="VersioControl\BadStatmentException.cs" />
+    <Compile Include="VersioControl\Version.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="LICENSE">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
@@ -127,13 +147,20 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckUpdate.resx">
+      <DependentUpon>CheckUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConfiguration.resx">
       <DependentUpon>FormConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="License.resx">
+      <DependentUpon>License.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="parameters.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
