@@ -1,5 +1,9 @@
 # packager
-packaging programs, binaries, files and other files into zip file format called release.zip
+packaging programs, binaries and other files into zip file format called release.zip automatically 
+
+## Download Packager 
+
+You can download latest stable release of packager in [https://github.com/AlkindiX/packager/releases/latest](here)
 ## Configure it in easy steps
 
 You can configure packager easily by two methods 
