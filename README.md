@@ -1,16 +1,28 @@
 # packager
 packaging programs, binaries, files and other files into zip file format called release.zip
-## In easy steps
-1. Configure packager using command line 
-> packager.exe -s --g
-Or use -h for more informations
-2. Click packager.exe and done
+## Configure it in easy steps
+1. Open command line
+### Method 1: Graphical user interface (GUI)
+1. Type > packager.exe -s --g
+2. Add release directory by press add button
+3. Add some files if you went to exclude them by click add real file or global file
+4. Don't forget to press save changes to save your setting
+5. Just click packager.exe and done
+### Method 2: using command line
+1. Open cmd by open start menu -> run -> cmd and click run
+2. Type > cd <packager path> and press enter
+2. Now you need to add your first directory by type
+> packager -s --r ---add <Release directory path>
+Then a message will appear that it added successfully. You can add more directories by using this argument
+3. Exclude some files from zipping if you don't went to add them by type
+> packager -s --e ---add <file path>
+3. Click packager.exe and package will perform all the zipping automaticity 
 
 # Features
 This packager contains several features
 
 ## Multiple release directories
-You can include more then directory to be build into zip format. Each dir will produce its release.zip file.
+You can include more then directory to be build into zip format. Packager will produce release.zip file for each directory automatically  
 
 ## Exclude list
 
