@@ -3,7 +3,12 @@ packaging programs, binaries and other files into zip file format called release
 
 ## Download Packager 
 
-You can download latest stable release of packager in [https://github.com/AlkindiX/packager/releases/latest](here)
+You can download latest stable release of packager in [https://github.com/AlkindiX/packager/releases/latest](https://github.com/AlkindiX/packager/releases/latest)
+
+## Install Packager 
+
+Install Packager by unzip the files into your own directory
+
 ## Configure it in easy steps
 
 You can configure packager easily by two methods 
