@@ -1,9 +1,11 @@
-# packager
-packaging programs, binaries and other files into zip file format called release.zip automatically 
+# Packager
+Packaging programs, binaries and other files into zip file format called release.zip automatically. It is useful for dynamic zipping (Automatic zipping). This program help developers to develop their programs and application and zip them automatically. Moreover, it is help full for daily build.
+
+This program uses zip file compress system, because it is available in many platforms, for example Ubuntu, Windows.
 
 ## Download Packager 
 
-* You can download latest stable release of packager in [https://github.com/AlkindiX/packager/releases/latest](https://github.com/AlkindiX/packager/releases/latest)
+* You can download latest stable release of packager from [https://github.com/AlkindiX/packager/releases/latest](https://github.com/AlkindiX/packager/releases/latest)
 
 * Or you can download other releases or prerelease version in [https://github.com/AlkindiX/packager/releases](https://github.com/AlkindiX/packager/releases/latest)
 
@@ -17,7 +19,7 @@ You can configure packager easily by two methods
 
 ### Method 1: Graphical user interface (GUI)
 
-1. Type > packager.exe -s --g
+1. Type ``` > packager.exe -s --g ```
 2. Add release directory by press add button
 3. Add some files if you went to exclude them by click add real file or global file
 4. Don't forget to press save changes to save your setting
@@ -26,12 +28,11 @@ You can configure packager easily by two methods
 ### Method 2: using command line
 
 1. Open cmd by open start menu -> run -> cmd and click run
-2. Type > cd <packager path> and press enter
+2. Type ``` > cd <packager path> and press enter ```
 2. Now you need to add your first directory by type
 > packager -s --r ---add <Release directory path>
 Then a message will appear that it added successfully. You can add more directories by using this argument
-3. Exclude some files from zipping if you don't went to add them by type
-> packager -s --e ---add <file path>
+3. Exclude some files from zipping if you don't went to add them by type ``` > packager -s --e ---add <file path> ```
 3. Click packager.exe and package will perform all the zipping automaticity 
 
 # Features
