@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Packager by AlkindiX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Packager</h1>
+      <h2 class="project-tagline">packaging (zipping) programs, binaries, files and other files into zip file format called release.zip</h2>
+      <a href="https://github.com/AlkindiX/packager" class="btn">View on GitHub</a>
+      <a href="https://github.com/AlkindiX/packager/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/AlkindiX/packager/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="packager" class="anchor" href="#packager" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packager</h1>
+
+<p>Packaging programs, binaries and other files into zip file format called release.zip automatically. It is useful for dynamic zipping (Automatic zipping). This program help developers to develop their programs and application and zip them automatically. Moreover, it is help full for daily build.</p>
+
+<p>This program uses zip file compress system, because it is available in many platforms, for example Ubuntu, Windows.</p>
+
+<h2>
+<a id="download-packager" class="anchor" href="#download-packager" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Packager</h2>
+
+<ul>
+<li><p>You can download latest stable release of packager from <a href="https://github.com/AlkindiX/packager/releases/latest">https://github.com/AlkindiX/packager/releases/latest</a></p></li>
+<li><p>Or you can download other releases or prerelease version in <a href="https://github.com/AlkindiX/packager/releases/latest">https://github.com/AlkindiX/packager/releases</a></p></li>
+</ul>
+
+<h2>
+<a id="install-packager" class="anchor" href="#install-packager" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install Packager</h2>
+
+<p>When you finished downloading Packager. You can install it by unzip the files into your own directory. Just start up packager by pressing packager.exe to inistliziton   it for first use. This step is optionally
+Install Packager by unzip the files into your own directory</p>
+
+<h2>
+<a id="configure-it-in-easy-steps" class="anchor" href="#configure-it-in-easy-steps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure it in easy steps</h2>
+
+<p>You can configure packager easily by two methods. The first one is using GUI and the other one is CLI. You can use packager by launching the setting window using command line. On the other side, you can use packager in command line using several command line arguments. Both are fully supported.</p>
+
+<h3>
+<a id="method-1-graphical-user-interface-gui" class="anchor" href="#method-1-graphical-user-interface-gui" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method 1: Graphical user interface (GUI)</h3>
+
+<ol>
+<li>Type <code>&gt; packager.exe -s --g</code>
+</li>
+<li>Add release directory by press add button</li>
+<li>Add some files if you went to exclude them by click add real file or global file</li>
+<li>Don't forget to press save changes to save your setting</li>
+<li>Just click <code>&gt; packager.exe</code> and done</li>
+</ol>
+
+<h3>
+<a id="method-2-using-command-line" class="anchor" href="#method-2-using-command-line" aria-hidden="true"><span class="octicon octicon-link"></span></a>Method 2: using command line</h3>
+
+<ol>
+<li>Open cmd by open start menu -&gt; run -&gt; cmd and click run</li>
+<li>Type <code>&gt; cd &lt;packager path&gt; and press enter</code>
+</li>
+<li>Now you need to add your first directory by type <code>&gt; packager -s --r ---add &lt;Release directory path&gt;</code>
+Then a message will appear that it added successfully. You can add more directories by using this argument</li>
+<li>Exclude some files from zipping if you don't went to add them by type <code>&gt; packager -s --e ---add &lt;file path&gt;</code>
+</li>
+<li>Click <code>&gt; packager.exe</code> and package will perform all the zipping automaticity </li>
+</ol>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h1>
+
+<p>This packager contains several features</p>
+
+<h2>
+<a id="multiple-release-directories" class="anchor" href="#multiple-release-directories" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple release directories</h2>
+
+<p>You can include more than directory to be built into zip format. Packager will produce release.zip file for each directory automatically  </p>
+
+<h2>
+<a id="exclude-list" class="anchor" href="#exclude-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exclude list</h2>
+
+<p>You can exclude files that aren't needed or you won't show it to the others. Its contain two features</p>
+
+<ol>
+<li>Real filename: so you can chose a filename by browsing the file or add the file using command line. This option let you decide this file will not include in your specific directory</li>
+<li>Global file: you can exclude file you won't be shown in all release directories</li>
+</ol>
+
+<h2>
+<a id="for-developers" class="anchor" href="#for-developers" aria-hidden="true"><span class="octicon octicon-link"></span></a>For Developers</h2>
+
+<p>You can easily put this file location into your build project. So after successful build, packager will absolutely will work and you can also view the output. I always use this program for many projects in visual studio and it worked fine. Moreover, you can redistribute packager to be more useful.</p>
+
+<h2>
+<a id="fully-support-in-command-line" class="anchor" href="#fully-support-in-command-line" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fully support in command line</h2>
+
+<p>You can use the command line to configure the project easily using easy command line arguments</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Packager is licensed under GPL v3.0</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/AlkindiX/packager">Packager</a> is maintained by <a href="https://github.com/AlkindiX">AlkindiX</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
