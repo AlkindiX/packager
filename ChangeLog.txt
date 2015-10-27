@@ -1,0 +1,25 @@
+2.0 Beta 2:-
+BUGS
+	- Fixing database's tables' primary key problem.
+FEATURES
+	- This is the second beta version of packager.
+	- Removed Logging system by default to prevent errors (removed)
+	- Now Support Linux distributions and tested on Ubuntu 15.10. GUI windows and logging are not supported by linux. But all great features are aviliable and fully supported
+	- Support Mono freamwork v4.0
+	- Only support X86_64 in Linux
+	- ---show command line now is more enhanced.
+	- Output is now more enhanced and easy to read
+	- You can remove any release directory from the list using its Id
+
+2.0 Beta:-
+This is the big major change on packager project which it is not compatible with the older one. But with all same great features and more
+
+BUGS
+	- Bug fixed when zipping file
+
+FEATURES
+	- Using SQLite to store all data with more flexible and easy to use
+	- Help command enhanced and become more readable and understandable
+
+BACKWARD COMPITIBLE
+	- This beta version DOS NOT have backward compitible with older versions. So you have to renter all your previous data

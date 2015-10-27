@@ -3,6 +3,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8860B29B-749F-4925-86C8-F9C4B93C9DA5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -22,14 +24,14 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;CSS_PROJECT;LINUX</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;CSS_PROJECT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,10 +41,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>5</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>Packager.Program</StartupObject>
@@ -53,16 +55,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x64\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;CSS_PROJECT;LINUX</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;CSS_PROJECT</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-    <WarningLevel>4</WarningLevel>
-    <Optimize>false</Optimize>
-    <LangVersion>5</LangVersion>
-    <DocumentationFile>bin\x64\Debug\Packager.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -73,42 +71,43 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>false</Prefer32Bit>
-    <WarningLevel>4</WarningLevel>
-    <LangVersion>5</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\Common\Common.Data\bin\Release\Common.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Ionic.Zip">
       <HintPath>packages\DotNetZip.1.9.6\lib\net20\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\Visual Studio 2013\Projects\Syn\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.WindowsAPICodePack">
+      <HintPath>..\..\..\Desktop\WE Application\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\..\..\Desktop\WE Application\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
     </Reference>
     <Reference Include="Octokit">
       <HintPath>packages\Octokit.0.14.0\lib\net45\Octokit.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>bin\Release\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoDevelop.VBNetBinding, Version=2.6.0.0, Culture=neutral">
-      <Package>monodevelop-core-addins</Package>
-    </Reference>
-    <Reference Include="Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
-    <Reference Include="MonoDevelop.Gettext, Version=2.6.0.0, Culture=neutral">
-      <Package>monodevelop-core-addins</Package>
-    </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
-    <Reference Include="Mono.Data.Sqlite">
-      <Private>True</Private>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Data.Linq" />
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
-    <Reference Include="Mono.Posix" />
-    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <Package>glib-sharp-2.0</Package>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Cairo" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Net.Http.WebRequest" />
-    <Reference Include="System.Net" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutBox.cs">
@@ -118,13 +117,13 @@
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\Context.cs" />
-    <Compile Include="Database\ExecuteEvent.cs" />
     <Compile Include="License.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="License.Designer.cs">
       <DependentUpon>License.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogAttrbute.cs" />
     <Compile Include="PackageInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,7 +144,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\alkindi.pubxml" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,11 +162,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChangeLog.txt" />
     <Content Include="parameters.xml" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Microsoft.Web.WebJobs.Publish.1.0.4\tools\webjobs.targets" Condition="Exists('packages\Microsoft.Web.WebJobs.Publish.1.0.4\tools\webjobs.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

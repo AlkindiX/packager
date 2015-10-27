@@ -1,5 +1,7 @@
 ﻿using Common.Logging;
+#if WIN
 using Microsoft.VisualBasic;
+#endif
 using Packager.Properties;
 using System;
 using System.Collections.Generic;
@@ -25,21 +27,27 @@ namespace Packager
                     {
                         logdir.Create();
                     }
+
                     var log_session_file_name = Path.ChangeExtension(Path.Combine(logdir.FullName, (
-                        DateAndTime.Now.Year.ToString() +
+						DateTime.Now.Year.ToString() +
                         "_" +
-                        DateAndTime.Now.Month.ToString() +
+						DateTime.Now.Month.ToString() +
                         "_" +
-                        DateAndTime.Now.Day.ToString() +
+						DateTime.Now.Day.ToString() +
                         "-" +
-                        DateAndTime.Now.Hour.ToString() +
+						DateTime.Now.Hour.ToString() +
                         "_" +
-                        DateAndTime.Now.Minute.ToString()
+						DateTime.Now.Minute.ToString()
                         )), "log");
+
                     _log = new Common.Logging.Logging(log_session_file_name);
                     _log.AutoSave = false;
                     _log.AutoSaveInterval = 1;
+					#if WIN
                     _log.StopLogging = Settings.Default.EnableLog;
+					#elif LINUX
+					_log.StopLogging = false;
+					#endif
                     _log.AssertToConsoleIO = false;
                 }
                 return _log;

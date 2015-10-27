@@ -1,0 +1,32 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x64" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="39" Column="39" />
+      <File FileName="SQLite.cs" Line="1" Column="1" />
+      <File FileName="ChangeLog.txt" Line="1" Column="1" />
+      <File FileName="Database/ExecuteEvent.cs" Line="1" Column="1" />
+      <File FileName="Database/Context.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.packager>
+    <MonoDevelop.Ide.CustomExecutionModes>
+      <Data Name="Mono Soft Debugger (Custom)" Id="0ee95e9f-5ef0-4c34-97a1-aaf8a5922015" ModeId="Mono Soft Debugger">
+        <CommandData>
+          <Item Key="MonoDevelop.Ide.Execution.CustomArgsCustomizer">
+            <Value Arguments="-s --r ---add" ctype="CustomArgsExecutionModeData">
+              <EnvironmentVariables />
+            </Value>
+          </Item>
+          <Item Key="MonoDevelop.Ide.Execution.MonoExecutionCustomizer">
+            <Value ctype="MonoExecutionParameters" />
+          </Item>
+        </CommandData>
+      </Data>
+    </MonoDevelop.Ide.CustomExecutionModes>
+  </MonoDevelop.Ide.ItemProperties.packager>
+</Properties>

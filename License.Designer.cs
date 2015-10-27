@@ -1,4 +1,5 @@
-﻿namespace Packager
+﻿#if WIN
+namespace Packager
 {
     partial class License
     {
@@ -53,6 +54,7 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Font = new System.Drawing.Font("Tahoma", 12F);
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
@@ -62,6 +64,7 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -107,3 +110,4 @@
         private System.Windows.Forms.Button button1;
     }
 }
+#endif

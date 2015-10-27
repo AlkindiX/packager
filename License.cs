@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if WIN
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,5 +43,10 @@ namespace Packager
         {
             Process.Start("url:" + e.LinkText);
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }
+#endif

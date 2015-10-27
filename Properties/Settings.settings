@@ -2,12 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Packager.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ReleaseLocation" Type="System.Collections.Specialized.StringCollection" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="ExcludeFileList" Type="System.Collections.Specialized.StringCollection" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="ExcludeReleaseZipFile" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>

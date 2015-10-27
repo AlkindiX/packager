@@ -1,4 +1,5 @@
-﻿namespace Packager
+﻿#if WIN
+namespace Packager
 {
     partial class AboutBox
     {
@@ -190,3 +191,4 @@
         private System.Windows.Forms.Button okButton;
     }
 }
+#endif
