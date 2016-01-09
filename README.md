@@ -29,11 +29,11 @@ You can configure packager easily by two methods. The first one is using GUI and
 ### Method 2: using command line
 
 1. Open cmd by open start menu -> run -> cmd and click run
-2. Type ``` > cd <packager path> and press enter ```
+2. Type ``` > cd <packager path> ``` and press enter 
 2. Now you need to add your first directory by type ``` > packager -s --r ---add <Release directory path> ```
 Then a message will appear that it added successfully. You can add more directories by using this argument
 3. Exclude some files from zipping if you don't went to add them by type ``` > packager -s --e ---add <file path> ```
-3. Click ``` > packager.exe ``` and package will perform all the zipping automaticity 
+3. Click ``` > packager.exe ``` and package will perform all the zipping automatically 
 
 # Features
 This packager contains several features
@@ -57,5 +57,4 @@ You can easily put this file location into your build project. So after successf
 You can use the command line to configure the project easily using easy command line arguments
 
 ## License
-
 Packager is licensed under GPL v3.0

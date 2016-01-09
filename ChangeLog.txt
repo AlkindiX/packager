@@ -1,16 +1,64 @@
+2.3:-
+FUTURE UPDATE
+	Will support Graphical User interface for Linux using System.Windows.Forms using X11
+	Will support Mac OSX platform with Graphical User interface In Shaa ALLAH (Means if the Lord of the Creatures ALLAH accept may promise)
+2.2:-
+FUTURE UPDATE
+	Will support executing command line on Linux using either sh, bash or Python(Specially for Ubuntu)
+==============================================================================================================================================================================
+2.1:-
+FUTURE UPDATE
+	Will support executing command line via Batch language for Windows only
+==============================================================================================================================================================================
+2.0 Beta 3:-
+This is the latest beta I've made it. It have been tested ,less bugs and flexible. 
+IMPORTANT
+    - Installing the latest version of Mono is strongly required for Linux and MacOSX users 
+    - Do not press Ctrl+C or Ctrl+Z to interupt the application before launch and before exit due to database data loss,
+    I tried to make backup process before launch and after launch because the library for SQLite is not accurately designed for
+        program failers.  
+FEATURES
+    - Code have been organized in different classes in order to make project more flexible
+	- GUI Windows are now supporting all command line features and settings and easier to use
+	- You can customize release.zip file name in which you like
+	- All your release zip files are now collected in one directory called Output to easily access to them. And old
+	release zip files are collected in Old directory with date time
+	- Enhanced command line arguments for Windows users. 
+	- Your settings and database of your project is saved in your AppData directory in roaming  called setting.db 
+	Windows => C:\Users\<Your name>\AppData\Roaming\Packager> , in Linux => /home/<Your username>/.packager
+	- Logging is no longer supported due to many bugs in Common.Logging :-( in Windows and Linux
+	- Including TabStrip and FastColoredTextBox assemblies into this project for development
+	- Including Microsoft.WindowsAPICodePack.* for Windows
+	- Creating Packager GUI.cmd for fast access to the GUI configuration and Packager help.cmd for showing help instead of typing > packager.exe -h many times
+	- Organizing Project code
+    - Inserting standard headers for all application code files
+    - Create new logging table for logging
+    - Reformat many codes in order to make it beautiful
+	- All database will backup before launching the application and after launching the application in order to prevent data loss. Right now 
+		50-70% is chance of restoring data without loss them. These feature slow down the application startup and shutdown about 50% more
+	- Create  Logging and Configuration tables into the database. Configuration is 35% ready to use for program configuration only, logging
+		for feature and will be integrated to the GUI
+    - GUI is now supported for Linux using mono or dnx, but it is slow and less dynamic than Windows. But at least work
+    - Tested and run well on dnx based on dnvm project that made by Microsoft for Multiple platform support for .NET freamwork
+    - Output is colored to beutify it 
+    - Added Tools.ConsoleColor to integrate colorful output 
+BACKWARD COMPITIBLE 
+	- All your saved data from 2.0 Beta 2 will no longer compatible with 2.0 beta 2.
+==============================================================================================================================================================================
 2.0 Beta 2:-
 BUGS
 	- Fixing database's tables' primary key problem.
 FEATURES
 	- This is the second beta version of packager.
 	- Removed Logging system by default to prevent errors (removed)
-	- Now Support Linux distributions and tested on Ubuntu 15.10. GUI windows and logging are not supported by linux. But all great features are aviliable and fully supported
-	- Support Mono freamwork v4.0
+	- Now Support Linux distributions and tested on Ubuntu 15.10. GUI windows and logging are not supported by Linux. But all great features are available and fully supported
+	- Support Mono framework v4.0
 	- Only support X86_64 in Linux
 	- ---show command line now is more enhanced.
 	- Output is now more enhanced and easy to read
 	- You can remove any release directory from the list using its Id
 
+==============================================================================================================================================================================
 2.0 Beta:-
 This is the big major change on packager project which it is not compatible with the older one. But with all same great features and more
 
@@ -22,4 +70,7 @@ FEATURES
 	- Help command enhanced and become more readable and understandable
 
 BACKWARD COMPITIBLE
-	- This beta version DOS NOT have backward compitible with older versions. So you have to renter all your previous data
+	- This beta version DOS NOT have backward compatible with older versions. So you have to renter all your previous data	
+==============================================================================================================================================================================
+1.0 :=
+This is the first release of Packager
